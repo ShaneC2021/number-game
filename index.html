@@ -1,27 +1,23 @@
 <!DOCTYPE html>
- <html lang="en">
-   <head>
-     <title>Guessing Game</title>
-     <link rel="stylesheet" type="text/css" href="style.css" >
-   </head>
-   <body>
-     <div class="header center">
-       <h1> Welcome To the Guessing Game</h1>
-       <p>Where you get 3 attempts to guess which number between 1 and 100 the computer has chosen at random</p> 
-       <p>Try if you dare</p>
-     </div>
-    <div class="center buttons">
-      <button type="button" onclick="computerChooses()" class="start-btn">Click Me To Start</button>
-      <p id="computer"></p>
+<html lang="en">
+  <head>
+    <title>Guessing Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+  </head>
+  <body onload="computerChooses()"> <!--on page load computer chooses random number -->
+    <div class="header center">
+      <h1> Welcome To the Guessing Game</h1>
+      <p>Where you get 3 attempts to guess which number between 1 and 100 the computer has chosen at random</p> 
+      <p>Try if you dare</p>
     </div>
+    
     <div class="center buttons">
       <form id="myForm" onsubmit="compare()">
         <label for="guess">Your Guess</label>
-        <input class="input-box" size="1" type="text" placeholder="" name="guess" steps="0" id="guess" onfocus="this.value=''" required>
+        <input class="input-box" size="5" type="text" placeholder="" name="guess" steps="0" id="guess" onfocus="this.value=''" required>
         <button class="submit" type="submit">submit</button>
       </form>
     </div>
-
-<script src="index.js"></script>
-   </body>
- </html>
+    <script src="index.js"></script>
+  </body>
+</html>
